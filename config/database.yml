@@ -4,10 +4,10 @@ development:
   adapter: mysql
   database: coledge_development
   username: root
-  password: 
+  password: r00t
   host: localhost
   encoding: utf8
-  
+
 test: &TEST
   adapter: mysql
   database: coledge_test
