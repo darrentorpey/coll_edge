@@ -1,0 +1,22 @@
+=simple_error_messages_for :person
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :person, :first_name
+      %td=text_field :person, :first_name
+    %tr
+      %td.fixed=human_name_for :person, :middle_name
+      %td=text_field :person, :middle_name
+    %tr
+      %td.fixed=human_name_for :person, :last_name
+      %td=text_field :person, :last_name
+    %tr
+      %td.fixed=human_name_for :person, :nick_name
+      %td=text_field :person, :nick_name
+    %tr
+      %td.fixed=human_name_for :person, :gender
+      %td=text_field :person, :gender
+    %tr
+      %td.fixed=human_name_for :person, :birth_date
+      %td=ext_date_select :person, :birth_date
+      
