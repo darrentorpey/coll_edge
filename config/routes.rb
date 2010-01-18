@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :people
+
   map.namespace(:backend) do |backend|
     backend.resources :accounts
     backend.resources :sessions
