@@ -11,3 +11,10 @@ require 'tasks/rails'
 
 desc "Run all tests and features"
 task :default => [:test, :features]
+
+begin
+  gem 'lipsiadmin'
+  require 'lipsiadmin_tasks'
+rescue Gem::LoadError
+end
+

@@ -1,0 +1,6 @@
+=title "Dashboard"
+.padding
+  -box "What can you do?" do
+    %ul
+      %li=link_to_function "View Accounts", "Backend.app.load('/backend/accounts.js')"
+      %li=link_to_function "Create Account", "Backend.app.load('/backend/accounts/new')"

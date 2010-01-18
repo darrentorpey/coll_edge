@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace(:backend) do |backend|
+    backend.resources :accounts
+    backend.resources :sessions
+  end
+
+  map.backend                 '/backend',              :controller => 'backend/base', :action => 'index'
+  map.connect                 '/javascripts/:action.:format', :controller => 'javascripts'
+
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
@@ -26,4 +34,13 @@ ActionController::Routing::Routes.draw do |map|
   #   m.logout '/logout', :action => 'destroy'
   # end
 
+  ###################################################################
+  # Install the default routes
+  ###################################################################
+  
+  map.connect ':controller', :action => 'index'
+  map.connect ':controller/:action'
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action.:format'
 end
