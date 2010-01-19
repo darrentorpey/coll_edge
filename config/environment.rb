@@ -37,6 +37,12 @@ Rails::Initializer.run do |config|
              :version => '>= 1.0.1'
   config.gem "lipsiadmin", :version => "<= 5.1.1"
 
+  # Authorization
+  config.gem "cancan"
+
+  # Roles
+  config.gem 'easy_roles', :source => 'http://gemcutter.org'
+
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
