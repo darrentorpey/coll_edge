@@ -12,7 +12,7 @@ test: &TEST
   adapter: mysql
   database: coledge_test
   username: root
-  password: 
+  password: r00t
   host: localhost
   encoding: utf8
   

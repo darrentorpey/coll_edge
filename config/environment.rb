@@ -3,6 +3,8 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 
+I_KNOW_I_AM_USING_AN_OLD_AND_BUGGY_VERSION_OF_LIBXML2 = true
+
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -17,22 +19,17 @@ Rails::Initializer.run do |config|
   # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
-  # Specify gems that this application depends on.
-  config.gem 'RedCloth',
-             :lib => 'redcloth',
-             :version => '>= 4.2.2'
+  # Specify gems that this application depends on.'
   config.gem 'mislav-will_paginate',
              :lib => 'will_paginate',
              :source => 'http://gems.github.com',
              :version => '~> 2.3.11'
-  config.gem 'clearance',
-             :version => '>= 0.8.3'
   config.gem 'justinfrench-formtastic',
              :lib => 'formtastic',
              :source => 'http://gems.github.com',
              :version => '>= 0.2.4'
-  config.gem 'paperclip',
-             :version => '>= 2.3.1.1'
+  # config.gem 'paperclip',
+  #            :version => '>= 2.3.1.1'
   config.gem 'rack',
              :version => '>= 1.0.1'
   config.gem "lipsiadmin", :version => "<= 5.1.1"

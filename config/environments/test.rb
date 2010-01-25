@@ -38,7 +38,7 @@ config.gem 'fakeweb',
 # Webrat and dependencies
 # NOTE: don't vendor nokogiri - it's a binary Gem
 config.gem 'nokogiri',
-           :version => '1.3.3',
+           :version => '1.4.1',
            :lib     => false
 config.gem 'webrat',
            :version => '0.5.3'

@@ -17,3 +17,5 @@ config.action_view.debug_rjs                         = true
 config.action_mailer.raise_delivery_errors = false
 
 HOST = 'localhost'
+
+I_KNOW_I_AM_USING_AN_OLD_AND_BUGGY_VERSION_OF_LIBXML2 = true
