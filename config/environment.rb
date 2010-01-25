@@ -7,6 +7,8 @@ I_KNOW_I_AM_USING_AN_OLD_AND_BUGGY_VERSION_OF_LIBXML2 = true
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem 'compass', :version => '>= 0.8.17'
+  config.gem 'haml', :version => '>=2.2.16'
   # Settings in config/environments/* take precedence over those specified here.
 
   # Application configuration should go into files in config/initializers

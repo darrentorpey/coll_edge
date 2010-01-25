@@ -1,0 +1,44 @@
+/* line 1, ../../../app/stylesheets/reset.sass */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  outline: 0;
+  background: transparent; }
+
+/* line 13, ../../../app/stylesheets/reset.sass */
+ol, ul {
+  list-style: none; }
+
+/* line 16, ../../../app/stylesheets/reset.sass */
+body {
+  line-height: 1.5;
+  background: #fff;
+  margin: 1.5em 0; }
+
+/* line 21, ../../../app/stylesheets/reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 25, ../../../app/stylesheets/reset.sass */
+caption, th, td {
+  text-align: left;
+  font-weight: 400; }
+
+/* line 29, ../../../app/stylesheets/reset.sass */
+blockquote, q {
+  quotes: none; }
+
+/* line 32, ../../../app/stylesheets/reset.sass */
+:focus {
+  outline: 0; }
+
+/* line 35, ../../../app/stylesheets/reset.sass */
+a img {
+  border: none; }
