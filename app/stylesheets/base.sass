@@ -1,3 +1,19 @@
+@import compass/utilities.sass
+@import partials/transitions
+
+// Cross Browser Rounded Borders
+=rounded_border(!vertical, !horizontal, !size)
+  :-moz-border-radius-#{!vertical}#{!horizontal}= !size
+  :-webkit-border-#{!vertical}-#{!horizontal}-radius= !size
+
+=rounded_border_top(!size)
+  +rounded_border(top, left, !size)
+  +rounded_border(top, right, !size)
+
+=rounded_border_bottom(!size)
+  +rounded_border(bottom, left, !size)
+  +rounded_border(bottom, right, !size)
+
 !light_black = #222
 
 body

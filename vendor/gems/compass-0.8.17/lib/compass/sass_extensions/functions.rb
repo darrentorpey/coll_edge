@@ -17,3 +17,4 @@ end
 class Sass::Script::Functions::EvaluationContext
   include Sass::Script::Functions
 end
+

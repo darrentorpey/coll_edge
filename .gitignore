@@ -8,3 +8,4 @@ coverage/*
 *.swp
 
 !.keep
+app/stylesheets/.sass-cache/
