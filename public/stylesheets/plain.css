@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+}
+
+.basic_info_box h3 {
+  background-color: #659962;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  color: white;
+}
+
+.basic_info_box .main {
+  background-color: #CEB0A6;
+  padding: 5px 10px;
+}
