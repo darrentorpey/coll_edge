@@ -1,33 +1,30 @@
 @import base
 
-body
-  font-family: Arial
-
 !top_bg_color = #75B270
 !bottom_bg_color = #AAF2A9
 
 .basic_info_box
   h3
-    background-color= !top_bg_color
-    font-weight: bold
-    text-align: center
-    padding: 5px 10px
-    color: white
+    :background-color= !top_bg_color
+    :font-weight bold
+    :text-align center
+    :padding 5px 10px
+    :color #fff
+    +border(2px, blend(!top_bg_color, !bottom_bg_color))
     +rounded_border_top(6px)
-    border= 2px solid !top_bg_color - #111
     +border_blend(bottom, !top_bg_color, !bottom_bg_color)
   .main
-    background-color= !bottom_bg_color
-    padding: 5px 10px
-    border= 2px solid !bottom_bg_color - #111
-    border-top: none
+    :background-color= !bottom_bg_color
+    :padding 5px 10px
+    :border= 2px solid !bottom_bg_color - #111
+      :top none
     +rounded_border_bottom(4px)
 
 !tnm_bg_color = #F8EEDB
 ol#top_nav_menu
   +horizontal-list
-  margin: 5px 0px
+  :margin 5px 0px
   li
-    background-color= !tnm_bg_color
+    :background-color= !tnm_bg_color
     &::after
-      content: " \00BB"
+      :content " \00BB"

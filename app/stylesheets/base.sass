@@ -1,7 +1,12 @@
 @import compass/utilities.sass
 @import partials/transitions
 
-// Cross Browser Rounded Borders
+body
+  font-family: Arial
+
+=border(!size, !color)
+  border= !size solid !color
+
 =rounded_border(!vertical, !horizontal, !size)
   :-moz-border-radius-#{!vertical}#{!horizontal}= !size
   :-webkit-border-#{!vertical}-#{!horizontal}-radius= !size
