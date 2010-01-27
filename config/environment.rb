@@ -32,13 +32,16 @@ Rails::Initializer.run do |config|
   #            :version => '>= 2.3.1.1'
   config.gem 'rack',
              :version => '>= 1.0.1'
-  config.gem "lipsiadmin", :version => "<= 5.1.1"
+  config.gem 'lipsiadmin', :version => '<= 5.1.1'
 
   # Authorization
-  config.gem "cancan"
+  config.gem 'cancan'
 
   # Roles
   config.gem 'easy_roles', :source => 'http://gemcutter.org'
+
+  # Bitmask fields
+  config.gem 'bitmask-attribute', :version => '>= 1.1.0'
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.

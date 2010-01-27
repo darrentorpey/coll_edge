@@ -1,0 +1,15 @@
+- page_title "Events"
+
+%table
+  %tr
+    %th Date
+    %th Name
+  - for event in @events
+    %tr
+      %td= h event.date
+      %td= h event.name
+      %td= link_to 'Show', event
+      %td= link_to 'Edit', edit_event_path(event)
+      %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Event", new_event_path
