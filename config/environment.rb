@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'compass', :version => '>= 0.8.17'
-  config.gem 'haml', :version => '>=2.2.16'
+  config.gem 'haml', :version => '>=2.2.20'
   # Settings in config/environments/* take precedence over those specified here.
 
   # Application configuration should go into files in config/initializers
@@ -24,10 +24,9 @@ Rails::Initializer.run do |config|
              :lib => 'will_paginate',
              :source => 'http://gems.github.com',
              :version => '~> 2.3.11'
-  config.gem 'justinfrench-formtastic',
-             :lib => 'formtastic',
-             :source => 'http://gems.github.com',
-             :version => '>= 0.2.4'
+
+  config.gem 'formtastic', :version => '>= 0.9.7'
+
   # config.gem 'paperclip',
   #            :version => '>= 2.3.1.1'
   config.gem 'rack',

@@ -1,12 +1,6 @@
-- form_for @event do |f|
-  = f.error_messages
-  %p
-    = f.label :date
-    %br
-    = f.date_select :date
-  %p
-    = f.label :name
-    %br
-    = f.text_field :name
-  %p
-    = f.submit "Submit"
+- form.inputs do
+  = form.input :name, :label => 'Name'
+  / = form.input :properties, :label => 'Properties'
+  = form.input :properties_list, :label => 'Properties'
+  = form.input :date, :label => 'Date'
+  = form.buttons

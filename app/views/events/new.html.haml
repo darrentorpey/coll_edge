@@ -1,5 +1,6 @@
 - page_title "New Event"
 
-= render :partial => 'form'
+- semantic_form_for @event do |form|
+  = render :partial => 'form', :locals => { :form => form }
 
 %p= link_to "Back to List", events_path

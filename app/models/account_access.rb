@@ -26,6 +26,12 @@ class AccountAccess < Lipsiadmin::AccessControl::Base
     end
 
     # Please don't remove this comment! It's used for auto adding project modules
+    role.project_module :events do |project|
+      project.menu :list,   "/backend/events.js" do |submenu|
+        submenu.add :new, "/backend/events/new"
+      end
+    end
+
     role.project_module :people do |project|
       project.menu :list,   "/backend/people.js" do |submenu|
         submenu.add :new, "/backend/people/new"

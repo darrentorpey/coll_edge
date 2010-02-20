@@ -9,3 +9,4 @@ coverage/*
 
 !.keep
 app/stylesheets/.sass-cache/
+*.css

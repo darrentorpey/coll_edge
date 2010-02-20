@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :date, :name, :properties
+  attr_accessible :date, :name, :properties_list
 
   # Other ideas
   #=> boundary_buster...
@@ -12,8 +12,8 @@ class Event < ActiveRecord::Base
     5 => :eye_opening,
     6 => :enlightening,
     7 => :hard,
-    7 => :emotionally_challenging,
-    8 => :one_off,
+    8 => :emotionally_challenging,
+    9 => :one_off,
     }.values
 
   # bitmask :properties, :as => {
@@ -26,7 +26,22 @@ class Event < ActiveRecord::Base
   #   7 => :game_fest
   #   }.values
 
+  attr_accessor :properties_list
+  before_save :decode_properties
 
+  def properties_list
+    properties.join(' ')
+  end
+
+  private
+
+  def decode_properties
+    if @properties_list
+      self.properties = @properties_list.gsub(',', '').split(/\s+/).inject([]) do |coll, name|
+        coll << name.to_sym
+      end
+    end
+  end
 end
 
 class RomanticEncounter < Event

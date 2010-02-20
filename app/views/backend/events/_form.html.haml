@@ -1,0 +1,13 @@
+=simple_error_messages_for :event
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :event, :name
+      %td=text_field :event, :name
+    %tr
+      %td.fixed=human_name_for :event, :properties
+      %td=text_field :event, :properties
+    %tr
+      %td.fixed=human_name_for :event, :date
+      %td=ext_date_select :event, :date
+      

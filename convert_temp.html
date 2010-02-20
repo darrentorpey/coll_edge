@@ -1,0 +1,13 @@
+  <% semantic_form_for @post do |f| %>
+    <% f.inputs do %>
+      <%= f.input :title %>
+      <%= f.input :body %>
+    <% end %>
+    <% f.inputs :name => "Advanced", :id => "advanced" do %>
+      <%= f.input :created_at %>
+      <%= f.input :user_id, :label => "Author" %>
+    <% end %>
+    <% f.inputs "Extra" do %>
+      <%= f.input :update_at %>
+    <% end %>
+  <% end %>

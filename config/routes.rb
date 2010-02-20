@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :people
 
   map.namespace(:backend) do |backend|
+    backend.resources :events
     backend.resources :people
     backend.resources :accounts
     backend.resources :sessions
@@ -13,6 +14,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.backend                 '/backend',              :controller => 'backend/base', :action => 'index'
   map.connect                 '/javascripts/:action.:format', :controller => 'javascripts'
+
+  map.admin_events 'admin/events', :controller => 'admin/events'
+  map.admin_events 'admin/testing', :controller => 'admin/testing'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
